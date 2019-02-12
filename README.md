@@ -1,6 +1,6 @@
 # 🌲 fir
 
-![](https://badgen.net/codeclimate/loc/117/fir?color=055ff3)
+![](https://badgen.net/badgesize/gzip/https://github.com/117/fir/archive/master.zip?label=code%20size&color=055ff3)
 ![](https://badgen.net/badge/code%20style/prettier/ff51bc)
 
 > #### Tired of complicated logging? Me too.
