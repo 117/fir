@@ -4,12 +4,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
-const level_1 = require("./level");
+class Level {
+}
+Level.ALL = "All";
+Level.INFO = "INFO";
+Level.DEBUG = "DEBUG";
+Level.WARN = "WARN";
+Level.ERROR = "ERROR";
+exports.Level = Level;
 class Fir {
     constructor() {
         this.formats = new Map();
         this.loggers = new Map();
-        this.format(level_1.Level.ALL, (level, message) => `${level}: ${message}`);
+        this.format(Level.ALL, (level, message) => `${level}: ${message}`);
     }
     /**
      * Define a new format for the specified level.
@@ -18,8 +25,8 @@ class Fir {
      */
     format(level, formatter) {
         this.formats.set(level, formatter);
-        if (level == level_1.Level.ALL) {
-            Object.keys(level_1.Level).forEach(lvl => this.formats.set(level_1.Level[lvl], formatter));
+        if (level == Level.ALL) {
+            Object.keys(Level).forEach(lvl => this.formats.set(Level[lvl], formatter));
         }
         return this;
     }
@@ -45,7 +52,7 @@ class Fir {
         }
         // Handle any log file saving.
         this.loggers.forEach(function (logger, lvl) {
-            if (level == lvl || lvl == level_1.Level.ALL) {
+            if (level == lvl || lvl == Level.ALL) {
                 if (logger.async) {
                     fs_1.default.appendFile(logger.file, `${formatted}\r\n`, () => null);
                 }

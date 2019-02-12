@@ -1,7 +1,17 @@
 import fs from "fs";
 
-import { Level } from "./level";
-import { Logger } from "./logger";
+export interface Logger {
+  file: string;
+  async: boolean;
+}
+
+export class Level {
+  static ALL = "All";
+  static INFO = "INFO";
+  static DEBUG = "DEBUG";
+  static WARN = "WARN";
+  static ERROR = "ERROR";
+}
 
 export class Fir {
   private formats: Map<Level, CallableFunction> = new Map();

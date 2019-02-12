@@ -1,4 +1,14 @@
-import { Level } from "./level";
+export interface Logger {
+    file: string;
+    async: boolean;
+}
+export declare class Level {
+    static ALL: string;
+    static INFO: string;
+    static DEBUG: string;
+    static WARN: string;
+    static ERROR: string;
+}
 export declare class Fir {
     private formats;
     private loggers;
