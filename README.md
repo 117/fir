@@ -12,18 +12,14 @@
 
 `npm install --save 117/fir`
 
-### import
-
-```javascript
-import fir from "fir";
-import level from "fir/level";
-```
-
 ### example
 
 A simple formatting and saving example.
 
 ```js
+import fir from "fir";
+import level from "fir/level";
+
 fir.save(level.INFO, "./error.log");
 fir.format(level.INFO, (level, message) => `${level}: ${message}`);
 fir.log(level.INFO, "Hey! Welcome to fir.");
