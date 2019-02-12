@@ -20,7 +20,7 @@ A simple formatting and saving example.
 import fir from "fir";
 import { Level } from "fir";
 
-fir.save(Level.INFO, "./error.log");
+fir.save(Level.INFO, "./info.log");
 fir.format(Level.INFO, (level, message) => `${level}: ${message}`);
 fir.log(Level.INFO, "Hey! Welcome to fir.");
 ```
