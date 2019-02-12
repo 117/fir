@@ -8,3 +8,4 @@ Level.DEBUG = "DEBUG";
 Level.WARN = "WARN";
 Level.ERROR = "ERROR";
 exports.Level = Level;
+exports.default = Level;

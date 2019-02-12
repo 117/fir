@@ -14,7 +14,7 @@ export declare class Fir {
      * @param level desired log level
      * @param async should logging be asynchronous
      */
-    save(level: Level, file: string, async: boolean): Fir;
+    save(level: Level, file: string, async?: boolean): Fir;
     /**
      * Log a message through Fir.
      * @param level desired log level

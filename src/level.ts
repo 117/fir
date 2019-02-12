@@ -5,3 +5,5 @@ export class Level {
   static WARN = "WARN";
   static ERROR = "ERROR";
 }
+
+export default Level;
