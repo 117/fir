@@ -12,30 +12,24 @@
 
 `npm install --save 117/fir`
 
-### import
+### example
+
+All customization is on a per-level basis.  
+To catch all levels use `Level.ALL`.
 
 ```js
 import fir from "fir";
-```
 
-### logging
-
-```js
-fir.log(Level.INFO, "Hey! Welcome to fir.");
-```
-
-Want to log asynchronously? No problem, just use `fir.logAsync(...)`.
-
-### formatting
-
-```js
-fir.format(Level.INFO, (level, message) => message);
-```
-
-### saving to files
-
-```js
+// In this example only the error level will be logged to a file.
 fir.save(Level.ERROR, "./error.log");
+
+// The format callback should return your formatted message.
+fir.format(Level.ALL, (level, message) =>`${level}: ${message}`);
+
+// Now we can easily log our new format.
+fir.log(Level.INFO, "Hey! Welcome to fir.");
+fir.log(Level.DEBUG, "This debug message won't be saved.");
+fir.log(Level.ERROR, "But this error will.");
 ```
 
 ### levels
