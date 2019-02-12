@@ -12,30 +12,27 @@
 
 `npm install --save 117/fir`
 
-### usage
-
-To get started just import **fir**.
+### import
 
 ```js
 import fir from "fir";
 ```
 
----
-
-#### logging
-Logging couldn't be easier.
+### logging
 
 ```js
 fir.log(Level.INFO, "Hey! Welcome to fir.");
 ```
+
 Want to log asynchronously? No problem, just use `fir.logAsync(...)`.
 
-#### formatting
+### formatting
+
 ```js
 fir.format(Level.INFO, (level, message) => message);
 ```
 
-#### saving to files
+### saving to files
 
 ```js
 fir.save(Level.ERROR, "./error.log");
@@ -57,7 +54,6 @@ Or if you wish to use a catch-all.
 Level.ALL
 ```
 
----
 ### contribute
 
 Pull requests are welcome. So are collaborators! 🥳
