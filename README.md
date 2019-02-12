@@ -5,32 +5,26 @@
 
 > #### Tired of complicated logging? Me too.
 >
-> For small projects, the current popular loggers are absurdley complex and verbose.  
+> For small projects the current popular loggers are absurdley complex and verbose.  
 > That's why I made Fir. To be *simple* yet **powerful**.
 
 ### install
 
 `npm install --save 117/fir`
 
-### example
+### import
 
-All customization is on a per-level basis.  
-To catch all levels use `Level.ALL`.
-
-```js
+```javascript
 import fir from "fir";
-
-// In this example only the error level will be logged to a file.
-fir.save(Level.ERROR, "./error.log");
-
-// The format callback should return your formatted message.
-fir.format(Level.ALL, (level, message) =>`${level}: ${message}`);
-
-// Now we can easily log our new format.
-fir.log(Level.INFO, "Hey! Welcome to fir.");
-fir.log(Level.DEBUG, "This debug message won't be saved.");
-fir.log(Level.ERROR, "But this error will.");
 ```
+
+### methods
+
+| Class | Method                      | Description                      |
+| :---: | :-------------------------- | :------------------------------- |
+| `fir` | `save(level, file, async?)` | Define the log file for a level. |
+| `fir` | `format(level, formatter)`  | Define the format for a level.   |
+| `fir` | `log(level, input)`         | Log the provided input.          |
 
 ### levels
 
@@ -42,10 +36,20 @@ Level.DEBUG
 Level.WARN
 Level.ERROR
 ```
-Or if you wish to use a catch-all.
+Or if you wish to use a wild-card.
 
 ```js
 Level.ALL
+```
+
+### example
+
+A simple formatting and saving example.
+
+```js
+fir.save(Level.INFO, "./error.log")
+fir.format(Level.INFO, (level, message) =>`${level}: ${message}`)
+fir.log(Level.INFO, "Hey! Welcome to fir.");
 ```
 
 ### contribute
