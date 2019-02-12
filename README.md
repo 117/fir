@@ -6,7 +6,7 @@
 > #### Tired of complicated logging? Me too.
 >
 > For small projects the current popular loggers are absurdley complex and verbose.  
-> That's why I made Fir. To be _simple_ yet **powerful**.
+> That's why I made Fir. To be _small_ yet **powerful**.
 
 ### install
 
