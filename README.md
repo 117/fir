@@ -6,7 +6,7 @@
 > #### Tired of complicated logging? Me too.
 >
 > For small projects the current popular loggers are absurdley complex and verbose.  
-> That's why I made Fir. To be *simple* yet **powerful**.
+> That's why I made Fir. To be _simple_ yet **powerful**.
 
 ### install
 
@@ -23,25 +23,26 @@ import fir from "fir";
 A simple formatting and saving example.
 
 ```js
-fir.save(Level.INFO, "./error.log")
-fir.format(Level.INFO, (level, message) =>`${level}: ${message}`)
+fir.save(Level.INFO, "./error.log");
+fir.format(Level.INFO, (level, message) => `${level}: ${message}`);
 fir.log(Level.INFO, "Hey! Welcome to fir.");
 ```
 
 ### levels
 
-There are four types of levels available.  
+There are four types of levels available.
 
 ```js
-Level.INFO
-Level.DEBUG
-Level.WARN
-Level.ERROR
+Level.INFO;
+Level.DEBUG;
+Level.WARN;
+Level.ERROR;
 ```
+
 Or if you wish to use a wild-card.
 
 ```js
-Level.ALL
+Level.ALL;
 ```
 
 ### methods
