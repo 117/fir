@@ -38,7 +38,7 @@ fir.format(Level.INFO, (level, message) => message);
 fir.save(Level.ERROR, "./error.log");
 ```
 
-#### levels
+### levels
 
 There are four types of levels available.  
 
