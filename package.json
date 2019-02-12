@@ -1,0 +1,19 @@
+{
+  "name": "fir",
+  "version": "2.1.0",
+  "description": "simple formatted logging",
+  "main": "dist/src",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node dist/src",
+    "test": "tsc && ava dist/test --verbose"
+  },
+  "author": "117",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^11.9.0",
+    "ava": "^1.2.1",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {}
+}
