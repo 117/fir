@@ -16,6 +16,7 @@
 
 ```javascript
 import fir from "fir";
+import level from "fir/level";
 ```
 
 ### example
@@ -23,9 +24,9 @@ import fir from "fir";
 A simple formatting and saving example.
 
 ```js
-fir.save(Level.INFO, "./error.log");
-fir.format(Level.INFO, (level, message) => `${level}: ${message}`);
-fir.log(Level.INFO, "Hey! Welcome to fir.");
+fir.save(level.INFO, "./error.log");
+fir.format(level.INFO, (level, message) => `${level}: ${message}`);
+fir.log(level.INFO, "Hey! Welcome to fir.");
 ```
 
 ### levels
@@ -33,16 +34,16 @@ fir.log(Level.INFO, "Hey! Welcome to fir.");
 There are four types of levels available.
 
 ```js
-Level.INFO;
-Level.DEBUG;
-Level.WARN;
-Level.ERROR;
+level.INFO;
+level.DEBUG;
+level.WARN;
+level.ERROR;
 ```
 
 Or if you wish to use a wild-card.
 
 ```js
-Level.ALL;
+level.ALL;
 ```
 
 ### methods
