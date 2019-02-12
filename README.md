@@ -18,13 +18,15 @@
 import fir from "fir";
 ```
 
-### methods
+### example
 
-| Class | Method                      | Description                      |
-| :---: | :-------------------------- | :------------------------------- |
-| `fir` | `save(level, file, async?)` | Define the log file for a level. |
-| `fir` | `format(level, formatter)`  | Define the format for a level.   |
-| `fir` | `log(level, input)`         | Log the provided input.          |
+A simple formatting and saving example.
+
+```js
+fir.save(Level.INFO, "./error.log")
+fir.format(Level.INFO, (level, message) =>`${level}: ${message}`)
+fir.log(Level.INFO, "Hey! Welcome to fir.");
+```
 
 ### levels
 
@@ -42,15 +44,13 @@ Or if you wish to use a wild-card.
 Level.ALL
 ```
 
-### example
+### methods
 
-A simple formatting and saving example.
-
-```js
-fir.save(Level.INFO, "./error.log")
-fir.format(Level.INFO, (level, message) =>`${level}: ${message}`)
-fir.log(Level.INFO, "Hey! Welcome to fir.");
-```
+| Class | Method                      | Description                      |
+| :---: | :-------------------------- | :------------------------------- |
+| `fir` | `save(level, file, async?)` | Define the log file for a level. |
+| `fir` | `format(level, formatter)`  | Define the format for a level.   |
+| `fir` | `log(level, input)`         | Log the provided input.          |
 
 ### contribute
 
