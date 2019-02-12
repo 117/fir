@@ -1,12 +1,12 @@
 {
   "name": "fir",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "simple formatted logging",
   "main": "dist/src",
   "scripts": {
-    "build": "tsc",
     "dev": "node dist/src",
-    "test": "tsc && ava dist/test --verbose"
+    "test": "ava dist/test --verbose",
+    "build": "tsc"
   },
   "author": "117",
   "license": "MIT",
