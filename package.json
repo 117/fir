@@ -1,6 +1,6 @@
 {
   "name": "fir",
-  "version": "2.1.2",
+  "version": "2.2.2",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "scripts": {
