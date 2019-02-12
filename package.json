@@ -1,7 +1,7 @@
 {
   "name": "fir",
   "version": "2.1.2",
-  "description": "simple formatted logging",
+  "description": "a small yet powerful logger",
   "main": "dist/src",
   "scripts": {
     "dev": "node dist/src",
