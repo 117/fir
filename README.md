@@ -38,8 +38,8 @@ If you wish to format log messages:
 fir.format(Level.INFO, (level, message) => `${level}: ${message}`);
 ```
 
-The `callback` will be sent the log level, and message.  
-Return your formatted message to fir, and it will be applied at runtime.
+The `callback` will be sent the log level and message.  
+Return your formatted message, it will be applied at runtime.
 
 ### log
 
@@ -59,7 +59,7 @@ level.WARN;
 level.ERROR;
 ```
 
-Or if you wish to use a wild-card.
+Or if you wish to use all of them.
 
 ```js
 level.ALL;
