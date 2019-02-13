@@ -75,4 +75,4 @@ Level.ALL;
 
 ### contribute
 
-Pull requests are welcome. So are collaborators! 🥳
+Pull requests are welcome.
