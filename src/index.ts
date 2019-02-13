@@ -26,7 +26,7 @@ export class Fir {
    */
   format(
     level: Level,
-    formatter: (level: Level, message: string) => string
+    formatter: (level: string, message: string) => string
   ): Fir {
     this.formats.set(level, formatter);
     if (level == Level.ALL) {
