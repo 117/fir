@@ -1,6 +1,6 @@
 {
   "name": "@unsc/fir",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "scripts": {

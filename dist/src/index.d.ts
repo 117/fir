@@ -18,7 +18,7 @@ export declare class Fir {
      * @param level desired log level
      * @param message hello world
      */
-    format(level: Level, formatter: (level: Level, message: string) => string): Fir;
+    format(level: Level, formatter: (level: string, message: string) => string): Fir;
     /**
      * Define a log file to save to for the specified level.
      * @param level desired log level
