@@ -53,16 +53,16 @@ fir.log(Level.INFO, "Hey! Welcome to fir.");
 There are four types of levels available.
 
 ```js
-level.INFO;
-level.DEBUG;
-level.WARN;
-level.ERROR;
+Level.INFO;
+Level.DEBUG;
+Level.WARN;
+Level.ERROR;
 ```
 
 Or if you wish to use all of them.
 
 ```js
-level.ALL;
+Level.ALL;
 ```
 
 ### contribute
