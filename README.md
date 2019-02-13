@@ -16,10 +16,16 @@
 
 ### usage
 
-To import fir in your project.
+Here is an easy to use example. 
 
 ```js
 import fir, { Level } from "fir";
+
+fir
+  .save(Level.INFO, "./info.log") // save this level to a file
+  .format(Level.INFO, (level, message) => `${level}: ${message}`) // define a format
+  .log(Level.INFO, "Hey! Welcome to fir.");
+
 ```
 
 ### log
