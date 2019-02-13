@@ -15,21 +15,21 @@
 `npm install --save 117/fir`
 
 ### usage
----
-Make sure to use the following import.
+
+To import fir in your project.
 
 ```js
 import fir, { Level } from "fir";
 ```
 
-##### log
+### log
 
 ```js
 fir.log(Level.INFO, "Hey! Welcome to fir.");
 // INFO: Hey! Welcome to fir.
 ```
 
-##### format
+### format
 
 If you wish to format log messages:
 
@@ -40,7 +40,7 @@ fir.format(Level.INFO, (level, message) => `${level}: ${message}`);
 The `callback` will be sent the log level and message.  
 Return your formatted message, it will be applied at runtime.
 
-##### save
+### save
 
 If you want to save log messages:
 
@@ -50,7 +50,7 @@ fir.save(Level.INFO, "info.log");
 
 All `Level.INFO` log messages will be saved to the `info.log` file.
 
-##### levels
+### levels
 
 There are four types of levels available.
 
@@ -66,7 +66,7 @@ Or if you wish to use all of them.
 ```js
 Level.ALL;
 ```
----
+
 ### contribute
 
 Pull requests are welcome. So are collaborators! 🥳
