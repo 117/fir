@@ -1,7 +1,7 @@
 # 🌲 fir
 
 ![](https://badgen.net/npm/v/@unsc/fir?color=grey)
-![](https://badgen.net/david/dep/117/fir)
+![](https://badgen.net/npm/dw/@unsc/fir)
 ![](https://badgen.net/packagephobia/install/@unsc/fir?color=055ff3)
 ![](https://badgen.net/badge/code%20style/prettier/ff51bc)
 
