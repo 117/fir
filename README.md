@@ -12,27 +12,27 @@
 
 ### install
 
-`npm install --save 117/fir`
+`npm install --save @unsc/fir`
 
 ### usage
 
 Here is an easy to use example. 
 
 ```js
-import fir, { Level } from "fir";
+import fir from "fir";
 
-fir
-  .save(Level.INFO, "./info.log") // save this level to a file
-  .format(Level.INFO, (level, message) => `${level}: ${message}`) // define a format
-  .log(Level.INFO, "Hey! Welcome to fir.");
-
+fir.save("./info.log");
+fir.format((message) => `Example: ${message}`);
+fir.log("Hey! Welcome to fir."); 
 ```
 
 ### log
 
+An example using `moment` to format the time.
+
 ```js
-fir.log(Level.INFO, "Hey! Welcome to fir.");
-// INFO: Hey! Welcome to fir.
+fir.log("The default format is good.");
+// 05:45:35 Fir: The default format is good.
 ```
 
 ### format
@@ -40,37 +40,18 @@ fir.log(Level.INFO, "Hey! Welcome to fir.");
 If you wish to format log messages:
 
 ```js
-fir.format(Level.INFO, (level, message) => `${level}: ${message}`);
+fir.format((message) => `example: ${message}`);
 ```
 
-The `callback` will be sent the log level and message.  
-Return your formatted message, it will be applied at runtime.
+The `callback` will be sent the log message.  
+Return your formatted message and it will be applied at runtime.
 
 ### save
 
 If you want to save log messages:
 
 ```js
-fir.save(Level.INFO, "info.log");
-```
-
-All `Level.INFO` log messages will be saved to the `info.log` file.
-
-### levels
-
-There are four types of levels available.
-
-```js
-Level.INFO;
-Level.DEBUG;
-Level.WARN;
-Level.ERROR;
-```
-
-Or if you wish to use all of them.
-
-```js
-Level.ALL;
+fir.save("info.log");
 ```
 
 ### contribute
