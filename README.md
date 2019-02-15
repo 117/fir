@@ -21,7 +21,7 @@ Here is an easy to use example.
 ```js
 import fir from "fir";
 
-fir.save("./info.log");
+fir.save("./latest.log");
 fir.format((message) => `Example: ${message}`);
 fir.log("Hey! Welcome to fir."); 
 ```
