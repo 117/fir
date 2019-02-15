@@ -1,11 +1,11 @@
 {
   "name": "@unsc/fir",
-  "version": "2.4.7",
+  "version": "2.4.8",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "scripts": {
-    "dev": "npm run build && node dist/src",
-    "test": "npm run build && ava dist/test --verbose",
+    "dev": "node dist/src",
+    "test": "ava dist/test --verbose",
     "build": "tsc"
   },
   "author": "117",
