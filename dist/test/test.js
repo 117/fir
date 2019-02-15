@@ -10,7 +10,7 @@ ava_1.default("create format", async function (test) {
     test.pass();
 });
 ava_1.default("create logger", async function (test) {
-    src_1.default.save("./example.log", false);
+    src_1.default.save("./example.log");
     test.pass();
 });
 ava_1.default("log", async function (test) {

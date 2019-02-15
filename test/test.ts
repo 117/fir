@@ -7,7 +7,7 @@ ava("create format", async function(test) {
 });
 
 ava("create logger", async function(test) {
-  fir.save("./example.log", false);
+  fir.save("./example.log");
   test.pass();
 });
 

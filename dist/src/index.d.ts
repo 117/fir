@@ -1,9 +1,9 @@
 export declare class Fir {
     private formatter;
-    private saving;
+    private logfile;
     constructor();
     format(callback: (message: string) => string): Fir;
-    save(file: string, async?: boolean): Fir;
+    save(file: string): Fir;
     log(...output: any[]): Fir;
 }
 declare const _default: Fir;

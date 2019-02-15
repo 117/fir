@@ -14,20 +14,18 @@ class Fir {
         this.formatter = callback;
         return this;
     }
-    save(file, async = false) {
-        this.saving = { file, async };
+    save(file) {
+        this.logfile = file;
         return this;
     }
     log(...output) {
         const message = this.formatter(output.join(" "));
         process.stdout.write(`${message}\r\n`);
-        if (this.saving) {
-            fs_1.default.appendFileSync(this.saving.file, `${message.replace(ansi_regex_1.default(), "")}\r\n`);
+        if (this.logfile) {
+            fs_1.default.appendFileSync(this.logfile, `${message.replace(ansi_regex_1.default(), "")}\r\n`);
         }
         return this;
     }
 }
 exports.Fir = Fir;
 exports.default = new Fir();
-const fir = new Fir();
-fir.log("The default format is quite good");
