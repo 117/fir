@@ -5,10 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const ansi_regex_1 = __importDefault(require("ansi-regex"));
-const moment_1 = __importDefault(require("moment"));
 class Fir {
     constructor() {
-        this.formatter = message => `${moment_1.default().format("hh:mm:ss")} Fir: ${message}`;
+        this.formatter = message => `Fir: ${message}`;
     }
     format(callback) {
         this.formatter = callback;

@@ -1,13 +1,11 @@
 import fs from "fs";
 import ar from "ansi-regex";
-import moment from "moment";
 
 export class Fir {
   private formatter: CallableFunction;
   private logfile: string;
   constructor() {
-    this.formatter = message =>
-      `${moment().format("hh:mm:ss")} Fir: ${message}`;
+    this.formatter = message => `Fir: ${message}`;
   }
   format(callback: (message: string) => string): Fir {
     this.formatter = callback;

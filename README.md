@@ -16,23 +16,23 @@
 
 ### usage
 
-Here is an easy to use example. 
+Here is an easy to use example.
 
 ```js
 import fir from "fir";
 
 fir.save("./latest.log");
-fir.format((message) => `Example: ${message}`);
-fir.log("Hey! Welcome to fir."); 
+fir.format(message => `Example: ${message}`);
+fir.log("Hey! Welcome to fir.");
 ```
 
 ### log
 
-An example using `moment` to format the time.
+An example using the default format.
 
 ```js
-fir.log("The default format is good.");
-// 05:45:35 Fir: The default format is good.
+fir.log("Hey welcome to Fir.");
+// Fir: Hey welcome to Fir.
 ```
 
 ### format
@@ -40,7 +40,7 @@ fir.log("The default format is good.");
 If you wish to format log messages:
 
 ```js
-fir.format((message) => `example: ${message}`);
+fir.format(message => `example: ${message}`);
 ```
 
 The `callback` will be sent the log message.  
@@ -51,7 +51,7 @@ Return your formatted message and it will be applied at runtime.
 If you want to save log messages:
 
 ```js
-fir.save("info.log");
+fir.save("latest.log");
 ```
 
 ### contribute
