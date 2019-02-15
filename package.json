@@ -1,19 +1,22 @@
 {
   "name": "@unsc/fir",
-  "version": "2.2.5",
+  "version": "2.4.7",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "scripts": {
-    "dev": "node dist/src",
-    "test": "ava dist/test --verbose",
+    "dev": "npm run build && node dist/src",
+    "test": "npm run build && ava dist/test --verbose",
     "build": "tsc"
   },
   "author": "117",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^11.9.0",
+    "@types/node": "^11.9.3",
     "ava": "^1.2.1",
+    "chalk": "^2.4.2",
     "typescript": "^3.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
 }
