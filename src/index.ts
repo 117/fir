@@ -4,10 +4,7 @@ import moment from "moment";
 
 export class Fir {
   private formatter: CallableFunction;
-  private saving: {
-    file: string;
-    async: boolean;
-  };
+  private logfile: string;
   constructor() {
     this.formatter = message =>
       `${moment().format("hh:mm:ss")} Fir: ${message}`;
@@ -16,15 +13,15 @@ export class Fir {
     this.formatter = callback;
     return this;
   }
-  save(file: string, async: boolean = false): Fir {
-    this.saving = { file, async };
+  save(file: string): Fir {
+    this.logfile = file;
     return this;
   }
   log(...output: any[]): Fir {
     const message = this.formatter(output.join(" "));
     process.stdout.write(`${message}\r\n`);
-    if (this.saving) {
-      fs.appendFileSync(this.saving.file, `${message.replace(ar(), "")}\r\n`);
+    if (this.logfile) {
+      fs.appendFileSync(this.logfile, `${message.replace(ar(), "")}\r\n`);
     }
     return this;
   }
