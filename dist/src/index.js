@@ -5,6 +5,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const ansi_regex_1 = __importDefault(require("ansi-regex"));
+/**
+ * @name fir
+ * @author 117
+ * @repo https://github.com/117/fir
+ * @description a small yet powerful logger
+ */
 class Fir {
     constructor() {
         this.formatter = message => `Fir: ${message}`;
@@ -27,4 +33,5 @@ class Fir {
     }
 }
 exports.Fir = Fir;
-exports.default = new Fir();
+// Make global across imports.
+exports.default = (global["__fir"] = global["__fir"] || new Fir());

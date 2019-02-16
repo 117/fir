@@ -1,6 +1,13 @@
 import fs from "fs";
 import ar from "ansi-regex";
 
+/**
+ * @name fir
+ * @author 117
+ * @repo https://github.com/117/fir
+ * @description a small yet powerful logger
+ */
+
 export class Fir {
   private formatter: CallableFunction;
   private logfile: string;
@@ -25,4 +32,5 @@ export class Fir {
   }
 }
 
-export default new Fir();
+// Make global across imports.
+export default (global["__fir"] = global["__fir"] || new Fir());

@@ -1,3 +1,9 @@
+/**
+ * @name fir
+ * @author 117
+ * @repo https://github.com/117/fir
+ * @description a small yet powerful logger
+ */
 export declare class Fir {
     private formatter;
     private logfile;
@@ -6,5 +12,5 @@ export declare class Fir {
     save(file: string): Fir;
     log(...output: any[]): Fir;
 }
-declare const _default: Fir;
+declare const _default: any;
 export default _default;
