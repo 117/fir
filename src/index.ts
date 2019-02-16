@@ -1,13 +1,6 @@
 import fs from "fs";
 import ar from "ansi-regex";
 
-/**
- * @name fir
- * @author 117
- * @repo https://github.com/117/fir
- * @description a small yet powerful logger
- */
-
 export class Fir {
   private formatter: CallableFunction;
   private logfile: string;
