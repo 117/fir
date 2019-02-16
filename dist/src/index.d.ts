@@ -12,5 +12,5 @@ export declare class Fir {
     save(file: string): Fir;
     log(...output: any[]): Fir;
 }
-declare const _default: any;
+declare const _default: Fir;
 export default _default;

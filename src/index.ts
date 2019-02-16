@@ -32,5 +32,8 @@ export class Fir {
   }
 }
 
-// Make global across imports.
-export default (global["__fir"] = global["__fir"] || new Fir());
+if (!global["__fir"]) {
+  global["__fir"] = new Fir();
+}
+
+export default global["__fir"] as Fir;

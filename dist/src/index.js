@@ -33,5 +33,7 @@ class Fir {
     }
 }
 exports.Fir = Fir;
-// Make global across imports.
-exports.default = (global["__fir"] = global["__fir"] || new Fir());
+if (!global["__fir"]) {
+    global["__fir"] = new Fir();
+}
+exports.default = global["__fir"];
