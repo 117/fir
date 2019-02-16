@@ -14,18 +14,6 @@
 
 `npm install --save @unsc/fir`
 
-### usage
-
-Here is an easy to use example.
-
-```js
-import fir from "fir";
-
-fir.save("./latest.log");
-fir.format(message => `Example: ${message}`);
-fir.log("Hey! Welcome to fir.");
-```
-
 ### log
 
 An example using the default format.
