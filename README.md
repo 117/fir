@@ -44,4 +44,4 @@ fir.save("latest.log");
 
 ### contribute
 
-Pull requests are welcome.
+Pull requests are encouraged.
