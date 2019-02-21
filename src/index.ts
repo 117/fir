@@ -5,7 +5,7 @@ export class Fir {
   private formatter: CallableFunction;
   private logfile: string;
   constructor() {
-    this.formatter = message => `Fir: ${message}`;
+    this.formatter = message => message;
   }
   format(callback: (message: string) => string): Fir {
     this.formatter = callback;

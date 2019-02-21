@@ -1,9 +1,3 @@
-/**
- * @name fir
- * @author 117
- * @repo https://github.com/117/fir
- * @description a small yet powerful logger
- */
 export declare class Fir {
     private formatter;
     private logfile;
