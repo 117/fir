@@ -1,6 +1,5 @@
 # 🌲 fir
 
-![](https://badgen.net/badgesize/gzip/https://github.com/117/fir/archive/master.zip?label=repo%20size&color=055ff3)
 ![](https://badgen.net/badge/code%20style/prettier/ff51bc)
 
 > #### Tired of complicated logging? Me too.
