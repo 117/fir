@@ -1,5 +1,5 @@
 {
-  "name": "@unsc/fir",
+  "name": "@detach/fir",
   "version": "2.5.4",
   "description": "a small yet powerful logger",
   "main": "dist/src",

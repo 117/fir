@@ -1,8 +1,8 @@
 # 🌲 fir
 
-![](https://badgen.net/npm/v/@unsc/fir?color=grey)
-![](https://badgen.net/npm/dw/@unsc/fir)
-![](https://badgen.net/packagephobia/install/@unsc/fir?color=055ff3)
+![](https://badgen.net/npm/v/@detach/fir?color=grey)
+![](https://badgen.net/npm/dw/@detach/fir)
+![](https://badgen.net/packagephobia/install/@detach/fir?color=055ff3)
 ![](https://badgen.net/badge/code%20style/prettier/ff51bc)
 
 > #### Tired of complicated logging? Me too.
@@ -12,7 +12,7 @@
 
 ### install
 
-`npm install --save @unsc/fir`
+`npm install --save @detach/fir`
 
 ### log
 
