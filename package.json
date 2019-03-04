@@ -1,12 +1,10 @@
 {
   "name": "@detach/fir",
-  "version": "2.5.6",
+  "version": "2.5.7",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "scripts": {
-    "dev": "node dist/src",
-    "test": "ava dist/test --verbose",
-    "build": "tsc"
+    "dev": "node dist/src"
   },
   "author": "detach",
   "license": "MIT",

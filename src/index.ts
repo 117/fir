@@ -19,7 +19,11 @@ export class Fir {
     const message = this.formatter(output.join(" "));
     process.stdout.write(`${message}\r\n`);
     if (this.logfile) {
-      fs.appendFileSync(this.logfile, `${message.replace(ar(), "")}\r\n`);
+      try {
+        fs.appendFileSync(this.logfile, `${message.replace(ar(), "")}\r\n`);
+      } catch (exception) {
+        console.log("[fir] Error: Failed save to log file.");
+      }
     }
     return this;
   }
