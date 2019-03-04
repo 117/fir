@@ -12,7 +12,7 @@
 
 ### install
 
-`npm install --save @detach/fir`
+`npm install @detach/fir`
 
 ### log
 
