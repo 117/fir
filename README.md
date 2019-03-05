@@ -14,6 +14,17 @@
 
 `npm install @detach/fir`
 
+### example
+
+```js
+fir
+  .save("latest.log")
+  .format(message => `[Fir] ${message}`)
+  .log("Hello world!");
+```
+
+The text `Hello World!` will be logged to console and appended to the `latest.log` file.
+
 ### log
 
 An example using the default format.
