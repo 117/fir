@@ -1,6 +1,6 @@
 {
   "name": "@detach/fir",
-  "version": "2.5.7",
+  "version": "2.5.8",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "scripts": {
@@ -14,5 +14,7 @@
     "chalk": "^2.4.2",
     "typescript": "^3.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ansi-regex": "^4.0.0"
+  }
 }
