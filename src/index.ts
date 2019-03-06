@@ -16,13 +16,19 @@ export class Fir {
     return this;
   }
   log(...output: any[]): Fir {
+    output = output.map(element => {
+      if (typeof element == "object") {
+        element = JSON.stringify(element, null, 2);
+      }
+      return element;
+    });
     const message = this.formatter(output.join(" "));
     process.stdout.write(`${message}\r\n`);
     if (this.logfile) {
       try {
         fs.appendFileSync(this.logfile, `${message.replace(ar(), "")}\r\n`);
       } catch (exception) {
-        console.log("[fir] Error: Failed save to log file.");
+        console.log(exception);
       }
     }
     return this;
