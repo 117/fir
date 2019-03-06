@@ -1,6 +1,6 @@
 {
   "name": "@detach/fir",
-  "version": "2.5.9",
+  "version": "2.6.0",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "scripts": {
