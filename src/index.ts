@@ -44,6 +44,7 @@ function save(file: string, rotate: boolean = true) {
     if (fs.existsSync(options().logFile)) {
       fs.writeFileSync(
         path.join(
+          path.parse(options().logFile).dir,
           dayjs()
             .format("MM-DD-YY HH:MM:ss A")
             .concat(".backup")
