@@ -39,7 +39,7 @@ function save(file, rotate = true) {
     options().logFile = file;
     if (rotate) {
         if (fs_1.default.existsSync(options().logFile)) {
-            fs_1.default.writeFileSync(path_1.default.join(dayjs_1.default()
+            fs_1.default.writeFileSync(path_1.default.join(path_1.default.parse(options().logFile).dir, dayjs_1.default()
                 .format("MM-DD-YY HH:MM:ss A")
                 .concat(".backup")), fs_1.default.readFileSync(options().logFile).toString());
         }
