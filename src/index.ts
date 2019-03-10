@@ -51,6 +51,7 @@ function save(file: string, rotate: boolean = true) {
         ),
         fs.readFileSync(options().logFile).toString()
       );
+      fs.rmdirSync(options().logFile);
     }
   }
 }
