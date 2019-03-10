@@ -4,41 +4,61 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
 const ansi_regex_1 = __importDefault(require("ansi-regex"));
-class Fir {
-    constructor() {
-        this.formatter = message => message;
-    }
-    format(callback) {
-        this.formatter = callback;
-        return this;
-    }
-    save(file) {
-        this.logfile = file;
-        return this;
-    }
-    log(...output) {
-        output = output.map(element => {
-            if (typeof element == "object") {
-                element = JSON.stringify(element, null, 2);
-            }
-            return element;
-        });
-        const message = this.formatter(output.join(" "));
-        process.stdout.write(`${message}\r\n`);
-        if (this.logfile) {
-            try {
-                fs_1.default.appendFileSync(this.logfile, `${message.replace(ansi_regex_1.default(), "")}\r\n`);
-            }
-            catch (exception) {
-                console.log(exception);
-            }
+const dayjs_1 = __importDefault(require("dayjs"));
+/**
+ * Output a new line to the console and log.
+ * @param args message arguments to log to console
+ */
+function log(...args) {
+    args = args.map(element => {
+        if (typeof element == "object") {
+            element = JSON.stringify(element, null, 2);
         }
-        return this;
+        return element;
+    });
+    const line = options().formatter(args.join(" "));
+    process.stdout.write(`${line}\r\n`);
+    if (options().logFile) {
+        append(line);
     }
 }
-exports.Fir = Fir;
-if (!global["__fir"]) {
-    global["__fir"] = new Fir();
+/**
+ * Set the log formatter to be used.
+ * @param callback your custom formatter, must return a string
+ */
+function format(callback) {
+    options().formatter = callback;
 }
-exports.default = global["__fir"];
+/**
+ * Specify a file to append new log lines to.
+ * @param file path to log-file
+ */
+function save(file, rotate = true) {
+    options().logFile = file;
+    if (rotate) {
+        if (fs_1.default.existsSync(options().logFile)) {
+            fs_1.default.writeFileSync(path_1.default.join(dayjs_1.default()
+                .format("MM-DD-YY HH:MM:ss A")
+                .concat(".backup")), fs_1.default.readFileSync(options().logFile).toString());
+        }
+    }
+}
+function append(line) {
+    try {
+        fs_1.default.appendFileSync(options().logFile, `${line.replace(ansi_regex_1.default(), "")}\r\n`);
+    }
+    catch (exception) {
+        console.log(exception);
+    }
+}
+function options() {
+    return (global["fir"] =
+        global["fir"] || { formatter: message => message });
+}
+exports.default = {
+    format,
+    save,
+    log
+};
