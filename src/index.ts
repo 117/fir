@@ -1,42 +1,74 @@
 import fs from "fs";
+import path from "path";
 import ar from "ansi-regex";
+import dayjs from "dayjs";
 
-export class Fir {
-  private formatter: CallableFunction;
-  private logfile: string;
-  constructor() {
-    this.formatter = message => message;
-  }
-  format(callback: (message: string) => string): Fir {
-    this.formatter = callback;
-    return this;
-  }
-  save(file: string): Fir {
-    this.logfile = file;
-    return this;
-  }
-  log(...output: any[]): Fir {
-    output = output.map(element => {
-      if (typeof element == "object") {
-        element = JSON.stringify(element, null, 2);
-      }
-      return element;
-    });
-    const message = this.formatter(output.join(" "));
-    process.stdout.write(`${message}\r\n`);
-    if (this.logfile) {
-      try {
-        fs.appendFileSync(this.logfile, `${message.replace(ar(), "")}\r\n`);
-      } catch (exception) {
-        console.log(exception);
-      }
+import { Options } from "./options";
+
+/**
+ * Output a new line to the console and log.
+ * @param args message arguments to log to console
+ */
+
+function log(...args: any[]) {
+  args = args.map(element => {
+    if (typeof element == "object") {
+      element = JSON.stringify(element, null, 2);
     }
-    return this;
+    return element;
+  });
+  const line = options().formatter(args.join(" "));
+  process.stdout.write(`${line}\r\n`);
+  if (options().logFile) {
+    append(line);
   }
 }
 
-if (!global["__fir"]) {
-  global["__fir"] = new Fir();
+/**
+ * Set the log formatter to be used.
+ * @param callback your custom formatter, must return a string
+ */
+
+function format(callback: (line: string) => string) {
+  options().formatter = callback;
 }
 
-export default global["__fir"] as Fir;
+/**
+ * Specify a file to append new log lines to.
+ * @param file path to log-file
+ */
+
+function save(file: string, rotate: boolean = true) {
+  options().logFile = file;
+  if (rotate) {
+    if (fs.existsSync(options().logFile)) {
+      fs.writeFileSync(
+        path.join(
+          dayjs()
+            .format("MM-DD-YY HH:MM:ss A")
+            .concat(".backup")
+        ),
+        fs.readFileSync(options().logFile).toString()
+      );
+    }
+  }
+}
+
+function append(line: string) {
+  try {
+    fs.appendFileSync(options().logFile, `${line.replace(ar(), "")}\r\n`);
+  } catch (exception) {
+    console.log(exception);
+  }
+}
+
+function options(): Options {
+  return (global["fir"] =
+    global["fir"] || ({ formatter: message => message } as Options));
+}
+
+export default {
+  format,
+  save,
+  log
+};
