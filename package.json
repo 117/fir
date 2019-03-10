@@ -1,11 +1,9 @@
 {
   "name": "@detach/fir",
-  "version": "2.6.0",
+  "version": "2.7.1",
   "description": "a small yet powerful logger",
   "main": "dist/src",
-  "scripts": {
-    "dev": "node dist/src"
-  },
+  "scripts": {},
   "author": "detach",
   "license": "MIT",
   "devDependencies": {
@@ -15,6 +13,7 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
-    "ansi-regex": "^4.0.0"
+    "ansi-regex": "^4.0.0",
+    "dayjs": "^1.8.9"
   }
 }
