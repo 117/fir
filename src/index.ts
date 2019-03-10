@@ -46,7 +46,7 @@ function save(file: string, rotate: boolean = true) {
         path.join(
           path.parse(options().logFile).dir,
           dayjs()
-            .format("MM-DD-YY HH:MM:ss A")
+            .format("MM-DD-YY hh:mm:ss A")
             .concat(".backup")
         ),
         fs.readFileSync(options().logFile).toString()
