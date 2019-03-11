@@ -3,7 +3,6 @@
   "version": "2.8.6",
   "description": "a small yet powerful logger",
   "main": "dist/src",
-  "scripts": {},
   "author": "detach",
   "license": "MIT",
   "devDependencies": {
