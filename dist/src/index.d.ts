@@ -1,21 +1,10 @@
-/**
- * Output a new line to the console and log.
- * @param args message arguments to log to console
- */
+import { Options } from "./options";
 declare function log(...args: any[]): void;
-/**
- * Set the log formatter to be used.
- * @param callback your custom formatter, must return a string
- */
-declare function format(callback: (line: string) => string): void;
-/**
- * Specify a file to append new log lines to.
- * @param file path to log-file
- */
-declare function save(file: string, rotate?: boolean): void;
+declare function setOptions(options: Options): void;
+declare function getOptions(): Options;
 declare const _default: {
-    format: typeof format;
-    save: typeof save;
     log: typeof log;
+    setOptions: typeof setOptions;
+    getOptions: typeof getOptions;
 };
 export default _default;
