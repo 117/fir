@@ -17,41 +17,24 @@
 ### example
 
 ```js
-fir
-  .save("latest.log")
-  .format(message => `[Fir] ${message}`)
-  .log("Hello world!");
+fir.setOptions({
+  appendToFile: "latest.log",
+  formatter: function(message) {
+    return `[myApp] ${message}`;
+  }
+});
+
+fir.log("Hi there!");
 ```
 
-The text `Hello World!` will be logged to console and appended to the `latest.log` file.
+The text `Hi there!` will be logged to console and appended to the `latest.log` file.
 
-### log
+### options
 
-An example using the default format.
-
-```js
-fir.log("Hey welcome to Fir.");
-// Fir: Hey welcome to Fir.
-```
-
-### format
-
-If you wish to format log messages:
-
-```js
-fir.format(message => `example: ${message}`);
-```
-
-The `callback` will be sent the log message.  
-Return your formatted message and it will be applied at runtime.
-
-### save
-
-If you want to save log messages:
-
-```js
-fir.save("latest.log");
-```
+| Name           |              Type              | Description                                  |
+| :------------- | :----------------------------: | :------------------------------------------- |
+| `appendToFile` |             string             | Path to file in which lines should be saved. |
+| `formatter`    | CallableFunction(line: string) | Return a formatted log line.                 |
 
 ### contribute
 
