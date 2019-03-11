@@ -12,7 +12,11 @@
 
 ### install
 
+From NPM:  
 `npm install @detach/fir`
+
+From GitHub (always latest build):  
+`npm install 117/fir`
 
 ### example
 
