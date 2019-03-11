@@ -31,10 +31,10 @@ The text `Hi there!` will be logged to console and appended to the `latest.log` 
 
 ### options
 
-| Name           |              Type              | Description                                  |
-| :------------- | :----------------------------: | :------------------------------------------- |
-| `appendToFile` |             string             | Path to file in which lines should be saved. |
-| `formatter`    | CallableFunction(line: string) | Return a formatted log line.                 |
+| Name           |       Type       | Description                                  |
+| :------------- | :--------------: | :------------------------------------------- |
+| `appendToFile` |      string      | Path to file in which lines should be saved. |
+| `formatter`    | CallableFunction | Return a formatted log line.                 |
 
 ### contribute
 
