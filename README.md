@@ -15,7 +15,7 @@
 From NPM:  
 `npm install @detach/fir`
 
-From GitHub (always latest build):  
+From GitHub (latest):  
 `npm install 117/fir`
 
 ### example
