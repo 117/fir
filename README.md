@@ -31,7 +31,7 @@ fir.setOptions({
 fir.log("Hi there!");
 ```
 
-The text `Hi there!` will be logged to console and appended to the `latest.log` file.
+The text `[myApp] Hi there!` will be logged to console and appended to the `latest.log` file.
 
 ### options
 
