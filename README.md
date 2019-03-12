@@ -1,8 +1,8 @@
 # 🌲 fir
 
-![](https://badgen.net/npm/v/@detach/fir?color=grey)
-![](https://badgen.net/npm/dw/@detach/fir)
-![](https://badgen.net/packagephobia/install/@detach/fir?color=055ff3)
+![](https://badgen.net/npm/v/fir?color=grey)
+![](https://badgen.net/npm/dw/fir)
+![](https://badgen.net/packagephobia/install/fir?color=055ff3)
 ![](https://badgen.net/badge/code%20style/prettier/ff51bc)
 
 > #### Tired of complicated logging? Me too.
@@ -13,7 +13,7 @@
 ### install
 
 From NPM:  
-`npm install @detach/fir`
+`npm install fir`
 
 From GitHub (latest):  
 `npm install 117/fir`
