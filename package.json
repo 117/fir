@@ -1,10 +1,20 @@
 {
   "name": "fir",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "author": "detach",
   "license": "MIT",
+  "keywords": [
+    "logging",
+    "logger",
+    "node",
+    "simple",
+    "easy",
+    "small",
+    "console",
+    "logfiles"
+  ],
   "devDependencies": {
     "@types/node": "^11.9.3",
     "ava": "^1.2.1",
