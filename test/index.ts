@@ -3,6 +3,7 @@ import fs from "fs";
 import fir from "../src";
 
 fir.setOptions({
+  wipeOnRun: true,
   appendToFile: "latest.log",
   formatter: function(message) {
     return `[Test] ${message}`;
