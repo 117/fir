@@ -28,6 +28,11 @@ function append(line) {
 }
 function setOptions(options) {
     Object.assign(getOptions(), options);
+    if (getOptions().wipeOnRun && getOptions().appendToFile) {
+        if (fs_1.default.existsSync(getOptions().appendToFile)) {
+            fs_1.default.writeFileSync(getOptions().appendToFile, "");
+        }
+    }
 }
 function getOptions() {
     return (global["fir"] =
