@@ -30,6 +30,11 @@ function append(line: string) {
 
 function setOptions(options: Options) {
   Object.assign(getOptions(), options);
+  if (getOptions().wipeOnRun && getOptions().appendToFile) {
+    if (fs.existsSync(getOptions().appendToFile)) {
+      fs.writeFileSync(getOptions().appendToFile, "");
+    }
+  }
 }
 
 function getOptions(): Options {
