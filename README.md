@@ -5,11 +5,6 @@
 ![](https://badgen.net/packagephobia/install/fir?color=055ff3)
 ![](https://badgen.net/badge/code%20style/prettier/ff51bc)
 
-> #### Tired of complicated logging? Me too.
->
-> For small projects the current popular loggers are absurdley complex and verbose.  
-> That's why I made fir. To be _small_ yet **powerful**.
-
 ### install
 
 `npm install fir`
