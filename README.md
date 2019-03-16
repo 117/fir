@@ -12,11 +12,7 @@
 
 ### install
 
-From NPM:  
 `npm install fir`
-
-From GitHub (latest):  
-`npm install 117/fir`
 
 ### example
 
