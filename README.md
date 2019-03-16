@@ -14,15 +14,13 @@
 ```js
 fir.setOptions({
   appendToFile: "latest.log",
-  formatter: function(message) {
-    return `[myApp] ${message}`;
-  }
+  formatter: (message) => `[test] ${message}`
 });
 
 fir.log("Hi there!");
 ```
 
-The text `[myApp] Hi there!` will be logged to console and appended to the `latest.log` file.
+The text `[test] Hi there!` will be logged to console and appended to the `latest.log` file.
 
 ### options
 
