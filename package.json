@@ -1,6 +1,6 @@
 {
   "name": "fir",
-  "version": "3.0.2",
+  "version": "3.0.4",
   "description": "a small yet powerful logger",
   "main": "dist/src",
   "author": "detach",
