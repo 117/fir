@@ -5,11 +5,15 @@
 ![](https://badgen.net/packagephobia/install/fir?color=055ff3)
 ![](https://badgen.net/badge/code%20style/prettier/ff51bc)
 
-### install
+### Install
 
+From NPM:  
 `npm install fir`
 
-### example
+From GitHub:  
+`npm install xist/fir`
+
+### Example
 
 ```js
 fir.setOptions({
@@ -22,7 +26,7 @@ fir.log("Hi there!");
 
 The text `[test] Hi there!` will be logged to console and appended to the `latest.log` file.
 
-### options
+### Options
 
 | Name           |       Type       | Description                                  |
 | :------------- | :--------------: | :------------------------------------------- |
@@ -30,6 +34,6 @@ The text `[test] Hi there!` will be logged to console and appended to the `lates
 | `appendToFile` |      string      | Path to file in which lines should be saved. |
 | `formatter`    | CallableFunction | Return a formatted log line.                 |
 
-### contribute
+### Contribute
 
 Pull requests are encouraged.
