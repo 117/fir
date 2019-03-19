@@ -29,4 +29,3 @@ typings/
 .vuepress/dist
 .serverless
 .fusebox/
-package-lock.json
