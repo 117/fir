@@ -7,15 +7,13 @@
 
 ### Install
 
-From NPM:  
 `npm install fir`
-
-From GitHub:  
-`npm install xist/fir`
 
 ### Example
 
 ```js
+import fir from "fir";
+
 fir.setOptions({
   appendToFile: "latest.log",
   formatter: (message) => `[test] ${message}`
