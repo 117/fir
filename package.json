@@ -1,6 +1,6 @@
 {
   "name": "fir",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "a tiny yet powerful logger",
   "main": "dist/src",
   "author": "xist",
