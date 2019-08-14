@@ -1,7 +1,7 @@
 # 🌲 fir
 
 ![](https://badgen.net/npm/v/fir?color=grey)
-![](https://badgen.net/npm/dw/fir)
+![](https://badgen.net/npm/dt/fir)
 ![](https://badgen.net/packagephobia/install/fir?color=055ff3)
 ![](https://badgen.net/badge/code%20style/prettier/ff51bc)
 
