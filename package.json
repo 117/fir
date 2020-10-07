@@ -27,6 +27,7 @@
     "ansi-regex": "^4.0.0"
   },
   "devDependencies": {
+    "@types/ansi-regex": "^5.0.0",
     "@types/node": "^11.9.3",
     "ava": "^1.2.1",
     "typescript": "^3.3.3"
