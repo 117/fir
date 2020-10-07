@@ -1,18 +1,18 @@
 {
   "name": "fir",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "a tiny yet powerful logger",
   "main": "dist/src",
-  "author": "xist",
-  "license": "MIT",
+  "author": "117",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xist/fir.git"
+    "url": "git+https://github.com/117/fir.git"
   },
   "bugs": {
-    "url": "https://github.com/xist/fir/issues"
+    "url": "https://github.com/117/fir/issues"
   },
-  "homepage": "https://github.com/xist/fir#readme",
+  "homepage": "https://github.com/117/fir#readme",
   "keywords": [
     "logging",
     "logger",
@@ -23,12 +23,12 @@
     "console",
     "logfiles"
   ],
+  "dependencies": {
+    "ansi-regex": "^4.0.0"
+  },
   "devDependencies": {
     "@types/node": "^11.9.3",
     "ava": "^1.2.1",
     "typescript": "^3.3.3"
-  },
-  "dependencies": {
-    "ansi-regex": "^4.0.0"
   }
 }
