@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "dist/",
-    "target": "ESNEXT",
+    "outDir": "dist",
+    "target": "esnext",
     "module": "commonjs",
     "declaration": true,
-    "strict": false,
+    "declarationDir": "@types",
+    "strict": true,
+    "skipLibCheck": true,
     "esModuleInterop": true
   }
 }

@@ -1,49 +1,33 @@
-import fs from 'fs'
-import ar from 'ansi-regex'
+export enum Level {
+  INFO,
+  WARN,
+  DEBUG,
+  ERROR,
+  PANIC,
+}
 
-import { Options } from './options'
+export enum Flag {
+  DATE = 'date',
+}
 
-function log(...args: any[]) {
-  args = args.map((element) => {
-    if (typeof element == 'object') {
-      element = JSON.stringify(element, null, 2)
-    }
-    return element
-  })
-  const line = getOptions().formatter(args.join(' '))
-  process.stdout.write(`${line}\r\n`)
-  if (getOptions().appendToFile) {
-    append(line)
+export class Logger {
+  flags: Flag[] = []
+
+  constructor(...flags: Flag[]) {
+    this.flags = flags
   }
-}
 
-function append(line: string) {
-  try {
-    fs.appendFileSync(
-      getOptions().appendToFile,
-      `${line.replace(ar(), '')}\r\n`
-    )
-  } catch (exception) {
-    console.log(exception)
+  log(level: Level = Level.INFO, data: { [key: string]: any }) {
+    let output = { level: level }
+
+    this.flags.forEach((flag) => {
+      switch (flag) {
+        case Flag.DATE:
+          output = { ...{ date: Date.now(), ...output } }
+      }
+    })
+
+    process.stdout.write(JSON.stringify({ ...output, ...data }).concat('\n'))
+    level >= Level.PANIC && process.exit()
   }
-}
-
-function setOptions(options: Options) {
-  Object.assign(getOptions(), options)
-  if (getOptions().wipeOnRun && getOptions().appendToFile) {
-    if (fs.existsSync(getOptions().appendToFile)) {
-      fs.writeFileSync(getOptions().appendToFile, '')
-    }
-  }
-}
-
-function getOptions(): Options {
-  return (global['fir'] =
-    global['fir'] || ({ formatter: (message) => message } as Options))
-}
-
-export default {
-  log,
-  setOptions,
-  getOptions,
 }

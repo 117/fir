@@ -1,9 +1,9 @@
 # 🌲 fir
 
-![](https://badgen.net/npm/v/fir?color=grey&style=flat)
-![](https://badgen.net/npm/dt/fir&style=flat)
-![](https://badgen.net/packagephobia/install/fir?color=055ff3&style=flat)
-![](https://badgen.net/badge/code%20style/prettier/ff51bc?style=flat)
+![version](https://img.shields.io/github/package-json/v/117/fir?color=196DFF&style=flat-square)
+![code](https://img.shields.io/github/languages/code-size/117/fir?color=F1A42E&style=flat-square&label=size)
+![build](https://img.shields.io/github/workflow/status/117/fir/test?style=flat-square)
+![prettier](https://img.shields.io/static/v1?label=style&message=prettier&color=ff51bc&style=flat-square)
 
 ### Install
 
@@ -11,26 +11,7 @@
 
 ### Example
 
-```js
-import fir from "fir";
-
-fir.setOptions({
-  appendToFile: "latest.log",
-  formatter: (message) => `[test] ${message}`
-});
-
-fir.log("Hi there!");
-```
-
-The text `[test] Hi there!` will be logged to console and appended to the `latest.log` file.
-
-### Options
-
-| Name           |       Type       | Description                                  |
-| :------------- | :--------------: | :------------------------------------------- |
-| `wipeOnRun`    |     boolean      | Automatically clear the log file on startup. |
-| `appendToFile` |      string      | Path to file in which lines should be saved. |
-| `formatter`    | CallableFunction | Return a formatted log line.                 |
+Coming soon.
 
 ### Contribute
 
